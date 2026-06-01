@@ -1,0 +1,224 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #041014;
+  --surface: #081b21;
+  --surface-hover: #0d2931;
+
+  --border: #143a43;
+  --border-hover: #14b8a6;
+
+  --text: #e6fffb;
+  --text-muted: #83aaa7;
+  --placeholder: #4e7472;
+
+  --primary: #14b8a6;
+
+  --sidebar-active-bg: #0c3534;
+  --sidebar-text: #8ca9a7;
+
+  --success: #2dd4bf;
+  --success-bg: #2dd4bf1a;
+
+  --warning: #fbbf24;
+  --warning-bg: #fbbf241a;
+
+  --danger: #fb7185;
+  --danger-bg: #fb71851a;
+
+  --accent: #22d3ee;
+  --accent-bg: #22d3ee1a;
+
+  --info: #38bdf8;
+  --info-bg: #38bdf81a;
+
+  --btn-bg: var(--primary);
+  --btn-bg-hover: #2dd4bf;
+  --btn-text: #02110f;
+}
+/*-----------------------------------------------*
+  Theme Configuration
+-------------------------------------------------*/
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-sidebar-active-bg: var(--sidebar-active-bg);
+  --color-sidebar-text: var(--sidebar-text);
+
+  --color-placeholder: var(--placeholder);
+
+  --color-success: var(--success);
+  --color-success-bg: var(--success-bg);
+
+  --color-warning: var(--warning);
+  --color-warning-bg: var(--warning-bg);
+
+  --color-danger: var(--danger);
+  --color-danger-bg: var(--danger-bg);
+
+  --color-accent: var(--accent);
+  --color-accent-bg: var(--accent-bg);
+  --color-info: var(--info);
+  --color-info-bg: var(--info-bg);
+
+  --color-btn-bg: var(--btn-bg);
+  --color-btn-text: var(--btn-text);
+  --color-btn-bg-hover: var(--btn-bg-hover);
+
+  --font-primary: var(--font-space-grotesk);
+  --font-secondary: var(--font-dMSans);
+
+  --animate-blink: blink 1s steps(1) infinite;
+}
+
+/* terminal  */
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.my-swal-popup {
+  border-radius: 16px;
+  background: var(--background);
+  color: var(--text-muted);
+}
+
+.my-swal-title {
+  color: var(--text);
+}
+
+.my-swal-button {
+  border-radius: 8px !important;
+  padding: 10px 24px !important;
+}
+
+html {
+  scrollbar-color: var(--success) transparent;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Lenis required styles */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-secondary);
+  cursor: none;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out both;
+}
+.stagger > * {
+  animation: slide-up 0.3s ease-out both;
+}
+.stagger > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.stagger > *:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.stagger > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.stagger > *:nth-child(4) {
+  animation-delay: 0.45s;
+}
+.stagger > *:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.stagger > *:nth-child(6) {
+  animation-delay: 0.75s;
+}
+.stagger > *:nth-child(7) {
+  animation-delay: 0.9s;
+}
+.stagger > *:nth-child(8) {
+  animation-delay: 1.05s;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-text font-primary;
+  }
+  h1 {
+    @apply text-4xl font-bold leading-[1.1] tracking-tight text-text md:text-5xl xl:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+  h3 {
+    @apply text-[28px] font-bold;
+  }
+
+  h4 {
+    @apply text-base text-text font-primary font-medium leading-normal tracking-normal;
+  }
+
+  p {
+    @apply text-base text-text-muted font-secondary font-light leading-normal tracking-normal;
+  }
+
+  .app-container {
+    @apply max-w-7xl w-full mx-auto px-5 py-10 md:py-15;
+  }
+}

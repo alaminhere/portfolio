@@ -1,0 +1,79 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  name     String
+  email    String  @unique
+  password String
+  bio      String?
+  github   String?
+  linkedin String?
+  facebook String?
+  whatsapp String?
+  location String?
+  resume   String?
+
+  verifyCode String?
+  expiryDate DateTime?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+}
+
+model Project {
+  id                   String           @id @default(auto()) @map("_id") @db.ObjectId
+  slug                 String           @unique
+  title                String
+  description          String
+  image                ProjectImage
+  techStack            String[]
+  whyTheseTechnologies Technology[]
+  problems             ProjectItem[]
+  solutions            ProjectItem[]
+  responsibilities     Responsibilities
+  links                ProjectLinks
+  createdAt            DateTime         @default(now())
+  updatedAt            DateTime         @updatedAt
+}
+
+type ProjectImage {
+  url       String
+  public_id String
+}
+
+type Technology {
+  title       String
+  description String
+}
+
+type ProjectItem {
+  title       String
+  description String
+}
+
+type Responsibilities {
+  frontend String[]
+  backend  String[]
+}
+
+type ProjectLinks {
+  liveDemo String
+  github   String
+}
+
+model AdminSkill {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  slug      String   @unique
+  title     String
+  techStack String[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
