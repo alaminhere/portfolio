@@ -123,8 +123,8 @@ export const personJsonLd = {
   description:
     'Full-Stack Developer building modern, reliable web applications and backend systems with Next.js, React, Node.js, Express, TypeScript, Prisma, MongoDB, and MySQL.',
   sameAs: [
-    `https://github.com/alamin-one`,
-    `https://www.linkedin.com/in/alamin-one/`,
+    `https://github.com/alaminhere`,
+    `https://www.linkedin.com/in/alamin-here`,
     `https://twitter.com`,
   ],
   knowsAbout: [

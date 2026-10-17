@@ -201,7 +201,7 @@ CLOUDINARY_API_SECRET=
 
 ## Repository
 
-https://github.com/alamin-one/my-portfolio
+https://github.com/alaminhere/portfolio
 
 ---
 
@@ -209,7 +209,7 @@ https://github.com/alamin-one/my-portfolio
 
 **Al-Amin**
 
-GitHub: https://github.com/alamin-one
+GitHub: https://github.com/alaminhere
 
 ---
 
