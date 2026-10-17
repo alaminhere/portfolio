@@ -92,7 +92,7 @@ touching code.
 
 ## Screenshots
 
-![Admin Overview](./public/overview_.webp)
+![Admin Overview](./public/overview_v2.webp)
 
 ---
 

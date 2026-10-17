@@ -74,7 +74,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: `${SITE_URL}/overview_.webp`,
+        url: `${SITE_URL}/overview_v2.webp`,
         width: 1200,
         height: 630,
         alt: 'Md. Alamin Portfolio Preview',
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     description:
       'Building modern, reliable web applications with Next.js, React, Node.js, Express, TypeScript, and modern database technologies.',
 
-    images: [`${SITE_URL}/overview_.webp`],
+    images: [`${SITE_URL}/overview_v2.webp`],
 
     creator: '@',
   },
@@ -118,7 +118,7 @@ export const personJsonLd = {
   '@type': 'Person',
   name: 'Md. Alamin',
   url: SITE_URL,
-  image: `${SITE_URL}/overview_.webp`,
+  image: `${SITE_URL}/overview_v2.webp`,
   jobTitle: 'Full-Stack Developer',
   description:
     'Full-Stack Developer building modern, reliable web applications and backend systems with Next.js, React, Node.js, Express, TypeScript, Prisma, MongoDB, and MySQL.',
