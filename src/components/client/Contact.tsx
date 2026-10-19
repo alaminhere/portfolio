@@ -40,7 +40,12 @@ const Contact = async () => {
               const Icon = item.icon;
 
               return (
-                <Link key={index} href={item.link ?? ''}>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={index}
+                  href={item.link ?? ''}
+                >
                   <div className={style.parent}>
                     <div className={style.iconBox}>
                       <Icon className={style.icon} />

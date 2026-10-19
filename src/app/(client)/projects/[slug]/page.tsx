@@ -158,11 +158,19 @@ const SingleCaseStudy = async ({ params }: Props) => {
             <ListLable title="Links" index="07" />
 
             <div className="mt-6 flex gap-3">
-              <Link href={project.data.links?.liveDemo ?? '/'}>
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href={project.data.links?.liveDemo ?? '/'}
+              >
                 <Button>Live Demo ↗</Button>
               </Link>
 
-              <Link href={project.data.links?.github ?? '/'}>
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href={project.data.links?.github ?? '/'}
+              >
                 <Button variant="secondary">GitHub repo ↗</Button>
               </Link>
             </div>

@@ -11,7 +11,7 @@ const MiniCard = ({
   return (
     <div
       className={clsx(
-        'bg-background p-4 border border-border rounded-md',
+        'bg-background p-4 border border-border rounded-lg',
         className,
       )}
     >
