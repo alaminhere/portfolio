@@ -32,7 +32,6 @@ export const updateProfile = async (prevData: unknown, formData: FormData) => {
     location: formData.get('location') as string,
     resume: formData.get('resume') as string,
   };
-
   try {
     await prisma.user.update({
       where: {
@@ -46,6 +45,7 @@ export const updateProfile = async (prevData: unknown, formData: FormData) => {
         facebook: data.facebook,
         whatsapp: data.whatsapp,
         location: data.location,
+        resume: data.resume,
       },
     });
 
