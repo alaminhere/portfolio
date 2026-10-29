@@ -28,7 +28,7 @@ const Badeg = ({
     danger:
       'bg-danger-bg border-danger/20  px-2 py-0.5 text-[10px] text-danger',
     techStack:
-      'bg-surface border border-border  px-3 py-1 text-[13px] text-text transition-colors',
+      'bg-primary/10 border border-border  px-3 py-1 text-[13px] text-text transition-colors',
   };
 
   const selectedVariantClass = variantClasses[variant];

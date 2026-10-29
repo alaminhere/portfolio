@@ -18,7 +18,7 @@ interface Props {
 const style = {
   paragraph: 'mt-3 w-full',
   spanParent: 'mt-8',
-  cardParagraph: 'border-b border-dashed border-border pb-1 pt-1 text-text',
+  cardParagraph: 'border-b border-dashed border-border pb-1 pt-1 text-text-muted',
 };
 
 export const generateStaticParams = async () => {
@@ -133,7 +133,7 @@ const SingleCaseStudy = async ({ params }: Props) => {
 
             <div className="mt-6 flex flex-col gap-3 md:flex-row">
               <MiniCard className="w-full bg-background/5 backdrop-blur-md">
-                <p className="text-sm">{`// frontend`}</p>
+                <p className="text-sm text-primary">{`// frontend`}</p>
 
                 {project.data.responsibilities.frontend.map((item, index) => (
                   <p key={index} className={style.cardParagraph}>
@@ -143,7 +143,7 @@ const SingleCaseStudy = async ({ params }: Props) => {
               </MiniCard>
 
               <MiniCard className="w-full bg-background/5 backdrop-blur-md">
-                <p className="text-sm">{`// backend`}</p>
+                <p className="text-sm text-primary">{`// backend`}</p>
 
                 {project.data.responsibilities.backend.map((item, index) => (
                   <p key={index} className={style.cardParagraph}>

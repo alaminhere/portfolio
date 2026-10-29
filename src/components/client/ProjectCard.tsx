@@ -15,6 +15,10 @@ const ProjectCard = ({
       url: string;
       public_id: string;
     };
+    links: {
+      liveDemo: string;
+      github: string;
+    };
   };
 }) => {
   return (
@@ -27,22 +31,36 @@ const ProjectCard = ({
         className="object-cover"
       />
 
-      <div className="p-5">
+      <div className="p-3 md:p-4">
         <h4 className="line-clamp-1">{item?.title}</h4>
 
-        <p className="mt-2 mb-5 line-clamp-2 leading-[1.4em]">
+        <p className="mt-1 mb-6 line-clamp-2 leading-[1.4em]">
           {item?.description}
         </p>
-
-        <Link href={`/projects/${item?.slug}`}>
-          <Button
-            variant="secondary"
-            size="sm"
-            className="bg-surface! border border-primary/20"
+        <div className="flex justify-start gap-2">
+          <Link
+            href={item?.links.liveDemo}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            View case study ↗
-          </Button>
-        </Link>
+            <Button
+              size="sm"
+              className="bg-primary/20! text-white border border-primary/20 hover:border-border-hover"
+            >
+              Live Demo ↗
+            </Button>
+          </Link>
+
+          <Link href={`/projects/${item?.slug}`}>
+            <Button
+              variant="secondary"
+              size="sm"
+              className="bg-primary/5! border border-primary/20"
+            >
+              Case Study & Code ↗
+            </Button>
+          </Link>
+        </div>
       </div>
     </Card>
   );

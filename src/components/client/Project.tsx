@@ -10,7 +10,6 @@ import ProjectCard from './ProjectCard';
 const Project = async () => {
   const limit = 3;
   const project = await getAllProject({ limit });
-
   return (
     <section>
       <div className="app-container py-10">

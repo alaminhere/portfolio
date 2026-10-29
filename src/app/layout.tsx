@@ -54,6 +54,10 @@ export const metadata: Metadata = {
 
   metadataBase: new URL(SITE_URL),
 
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+  },
   alternates: {
     canonical: SITE_URL,
   },
