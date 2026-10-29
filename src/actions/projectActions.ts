@@ -29,6 +29,7 @@ export const getAllProject = async (query?: {
         slug: true,
         description: true,
         image: true,
+        links: true,
       },
       skip: skip,
       take: limit,

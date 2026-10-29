@@ -8,6 +8,10 @@ type Project = {
     public_id: string;
     url: string;
   };
+  links: {
+    liveDemo: string;
+    github: string;
+  };
 };
 
 const ProjectsList = async ({ projects }: { projects: Project[] }) => {
